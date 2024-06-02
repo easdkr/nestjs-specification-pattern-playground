@@ -1,9 +1,11 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, UseFilters } from '@nestjs/common';
 import { UserService } from '../../../../applicaion/user/service';
 import { CreateUserRequest } from '../request';
 import { CreateUserResponse } from '../response';
+import { CoreExceptionFilter } from '../../../exception-filter';
 
 @Controller('users')
+@UseFilters(CoreExceptionFilter)
 export class UserController {
   public constructor(private readonly userService: UserService) {}
 
