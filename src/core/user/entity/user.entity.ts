@@ -2,7 +2,7 @@ import { UNSET_ID } from '../../common/constant';
 import { Role } from '../vo';
 
 export class User {
-  #id?: number;
+  #id: number;
   #email: string;
   #nickname: string;
   #password: string;
