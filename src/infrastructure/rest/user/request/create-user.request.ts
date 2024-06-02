@@ -1,7 +1,7 @@
 import { Exclude } from 'class-transformer';
 import { IsEmail, IsEnum, IsString, Length } from 'class-validator';
-import { User } from 'src/core/user/entity/user.entity';
-import { Role } from 'src/core/user/vo';
+import { User } from '../../../../core/user/entity/user.entity';
+import { Role } from '../../../../core/user/vo';
 
 export class CreateUserRequest {
   @IsEmail()
